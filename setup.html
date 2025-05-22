@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración de WOM Argentina</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #0284c7;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .step {
+      margin-bottom: 30px;
+      border-left: 4px solid #0284c7;
+      padding-left: 15px;
+    }
+    .note {
+      background-color: #fff8e1;
+      padding: 10px;
+      border-radius: 5px;
+      border-left: 4px solid #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <h1>Instrucciones para configurar WOM Argentina</h1>
+  
+  <div class="note">
+    <strong>Nota:</strong> Este proyecto requiere Node.js y npm instalados. Asegúrate de tenerlos antes de continuar.
+  </div>
+  
+  <div class="step">
+    <h2>Paso 1: Configurar el Frontend</h2>
+    <p>Navega a la carpeta del frontend e instala las dependencias:</p>
+    <pre>
+cd frontend
+npm install</pre>
+  </div>
+  
+  <div class="step">
+    <h2>Paso 2: Configurar el Backend</h2>
+    <p>Navega a la carpeta del backend e instala las dependencias:</p>
+    <pre>
+cd backend
+npm install</pre>
+  </div>
+  
+  <div class="step">
+    <h2>Paso 3: Configurar la Base de Datos</h2>
+    <p>Configura PostgreSQL y asegúrate de que las credenciales coincidan con las del archivo backend/src/config/config.js</p>
+  </div>
+  
+  <div class="step">
+    <h2>Paso 4: Iniciar el Backend</h2>
+    <p>En una terminal, navega a la carpeta del backend e inicia el servidor:</p>
+    <pre>
+cd backend
+npm start</pre>
+  </div>
+  
+  <div class="step">
+    <h2>Paso 5: Iniciar el Frontend</h2>
+    <p>En otra terminal, navega a la carpeta del frontend e inicia la aplicación React:</p>
+    <pre>
+cd frontend
+npm start</pre>
+    <p>Esto abrirá la aplicación en tu navegador automáticamente, generalmente en <a href="http://localhost:3000">http://localhost:3000</a></p>
+  </div>
+
+  <div class="step">
+    <h2>Método alternativo: Abrir directamente</h2>
+    <p>Si prefieres ver la aplicación sin configuración completa, puedes abrir el siguiente archivo en tu navegador:</p>
+    <pre>frontend/public/index.html</pre>
+    <p>Pero ten en cuenta que algunas funcionalidades no estarán disponibles sin el backend en funcionamiento.</p>
+  </div>
+</body>
+</html> 

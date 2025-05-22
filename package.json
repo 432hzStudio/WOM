@@ -1,0 +1,26 @@
+{
+  "name": "wom-argentina",
+  "version": "1.0.0",
+  "description": "Plataforma de micro campañas publicitarias basada en el concepto de boca en boca",
+  "main": "index.js",
+  "scripts": {
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build": "npm run build:frontend && npm run build:backend"
+  },
+  "keywords": [
+    "marketing",
+    "publicidad",
+    "microinfluencers",
+    "argentina"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 

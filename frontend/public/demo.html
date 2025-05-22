@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOM Argentina | Marketing Boca a Boca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+      <style>    :root {      --primary-50: #f0faff;      --primary-500: #0e98e9;      --primary-600: #0284c7;      --primary-700: #0369a1;      --primary-900: #034a76; /* Añadida esta variable que faltaba */      --secondary-500: #ff9500;      --secondary-600: #e67700;      --dark-50: #f5f7fa;      --dark-500: #5573a0;      --dark-800: #2f3e5c;      --dark-900: #2a364f;    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--dark-800);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-600);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-700);
+    }
+    
+    .btn-secondary {
+      background-color: var(--secondary-500);
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--secondary-600);
+    }
+    
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: var(--primary-600);
+      text-decoration: none;
+      font-size: 24px;
+    }
+    
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-link {
+      color: var(--dark-500);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-600);
+    }
+    
+    .hero {
+      background-color: #ffffff; /* Fondo blanco restaurado */
+      color: var(--dark-800); /* Color de texto oscuro para que sea visible */
+      padding: 80px 0;
+    }
+    
+    .hero-content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 40px;
+    }
+    
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .features {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eaeaea;
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--primary-50);
+      color: var(--primary-600);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .cta {
+      background-color: var(--primary-700);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .footer {
+      background-color: var(--dark-800);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    
+    .footer-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-link {
+      color: #a5b7d4;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    .copyright {
+      border-top: 1px solid #36496c;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      color: #7690b9;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-text,
+      .hero-image {
+        flex: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+    }
+    
+    /* Estilos para el dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      border-radius: 6px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-option {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      color: var(--dark-800);
+      transition: background-color 0.3s;
+      border-bottom: 1px solid var(--dark-50);
+    }
+    
+    .dropdown-option:last-child {
+      border-bottom: none;
+    }
+    
+    .dropdown-option:hover {
+      background-color: var(--dark-50);
+    }
+    
+    .dropdown-option-icon {
+      margin-right: 8px;
+      color: var(--primary-600);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+    }
+    
+    .dropdown-header {
+      padding: 12px 16px;
+      font-weight: 600;
+      color: var(--dark-500);
+      background-color: var(--dark-50);
+      border-bottom: 1px solid var(--dark-100);
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->    <nav class="navbar">    <div class="container">      <a href="../../wom.html" class="navbar-brand">WOM Argentina</a>      <div class="navbar-nav">        <a href="#" class="nav-link">Inicio</a>        <a href="#" class="nav-link">Cómo funciona</a>        <a href="#" class="nav-link">Precios</a>        <a href="feed-marcas.html" class="nav-link">Feed de Marcas</a>                <a href="feed-voicers.html" class="nav-link">Feed de Voicers</a>        <a href="../../wom.html" class="btn btn-outline" style="margin-right: 10px;">Volver al Portal</a>        <a href="login.html" class="btn btn-primary">Iniciar sesión</a>      </div>    </div>  </nav>
+  
+    <!-- Hero Section -->    <section class="hero">    <div class="container">      <div class="hero-content" style="flex-direction: column; text-align: center;">        <div class="hero-text" style="padding-right: 0; max-width: 800px; margin: 0 auto;">          <h1 style="color: #2f3e5c;">Marketing boca a boca en la era digital</h1>          <p style="color: #2f3e5c;">Conectamos marcas con personas influyentes a nivel local para crear campañas de marketing genuinas y efectivas.</p>        </div>                <!-- Logo WOM -->        <div style="width: 100%; display: flex; justify-content: center; margin-top: 30px; margin-bottom: 30px;">          <img src="images/logo-wom.png" alt="Logo WOM" style="width: 230px; height: 230px;">        </div>                <div style="width: 100%; margin-top: 20px; display: flex; justify-content: center;">          <div style="display: flex; gap: 30px;">            <a href="registro-marca.html" class="btn btn-secondary" onclick="window.location.href='registro-marca.html'" style="min-width: 180px;">Soy una Marca</a>            <a href="registro-voicer.html" class="btn" style="background: #ff9500; color: white; font-weight: bold; min-width: 180px;" onclick="window.location.href='registro-voicer.html'">Quiero ser Voicer</a>          </div>        </div>      </div>    </div>  </section>
+  
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Marketing basado en recomendaciones reales</h2>
+        <p>Creamos conexiones auténticas entre marcas y voces locales influyentes</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Conexión con Voicers auténticos</h3>
+          <p>Conectamos tu marca con personas reales que tienen influencia en sus círculos sociales.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10"></path>
+              <path d="M18 20V4"></path>
+              <path d="M6 20v-4"></path>
+            </svg>
+          </div>
+          <h3>Métricas transparentes</h3>
+          <p>Obtén datos claros sobre el rendimiento de tus campañas y el alcance real.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="M7 15h0"></path>
+              <path d="M12 15h0"></path>
+              <path d="M17 15h0"></path>
+            </svg>
+          </div>
+          <h3>Pagos seguros y transparentes</h3>
+          <p>Sistema de pagos simple y seguro tanto para marcas como para Voicers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿Listo para impulsar tu marca?</h2>
+      <p>Únete a WOM Argentina y transforma la forma en que tu marca se conecta con su audiencia.</p>
+      <div style="margin-top: 20px; display: flex; gap: 15px; justify-content: center;">
+        <a href="registro-marca.html" class="btn btn-secondary">Registrarme como Marca</a>
+        <a href="registro-voicer.html" class="btn" style="background: white; color: #0369a1; font-weight: bold;">Registrarme como Voicer</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 class="navbar-brand" style="color: white; margin-bottom: 15px;">WOM Argentina</h4>
+          <p>Conectamos marcas con personas influyentes a nivel local para crear campañas de marketing efectivas mediante recomendaciones personales.</p>
+        </div>
+        
+        <div>
+          <h5 class="footer-title">Enlaces útiles</h5>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Cómo funciona</a></li>
+            <li><a href="#" class="footer-link">Precios</a></li>
+            <li><a href="registro-voicer.html" class="footer-link">Sé un Voicer</a></li>
+            <li><a href="registro-marca.html" class="footer-link">Para Marcas</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="footer-title">Soporte</h5>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Preguntas frecuentes</a></li>
+            <li><a href="#" class="footer-link">Contacto</a></li>
+            <li><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer-link">Política de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2023 WOM Argentina. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

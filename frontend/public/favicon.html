@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Favicon WOM</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    canvas {
+      border: 1px solid #ddd;
+      margin: 20px auto;
+      display: block;
+    }
+    
+    .controls {
+      margin-bottom: 20px;
+    }
+    
+    button {
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    button:hover {
+      background-color: #0369a1;
+    }
+    
+    .instructions {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      background: #f5f7fa;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de Favicon para WOM Argentina</h1>
+  
+  <div class="controls">
+    <button id="downloadPNG">Descargar como PNG</button>
+    <button id="downloadICO">Descargar como ICO</button>
+  </div>
+  
+  <canvas id="faviconCanvas" width="64" height="64"></canvas>
+  
+  <div class="instructions">
+    <h3>Instrucciones:</h3>
+    <p>1. Este es un generador simple de favicon para WOM Argentina.</p>
+    <p>2. Haz clic en "Descargar como PNG" para obtener la imagen en formato PNG.</p>
+    <p>3. Para usar como favicon, coloca el archivo descargado como "favicon.ico" o "favicon.png" en la carpeta del proyecto.</p>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const canvas = document.getElementById('faviconCanvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Dibujar fondo
+      ctx.fillStyle = '#0284c7';
+      ctx.fillRect(0, 0, 64, 64);
+      
+      // Dibujar texto "WOM"
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 24px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('WOM', 32, 32);
+      
+      // Botón de descarga PNG
+      document.getElementById('downloadPNG').addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+      
+      // Botón de descarga ICO (realmente es PNG, pero con nombre ICO)
+      document.getElementById('downloadICO').addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.download = 'favicon.ico';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    });
+  </script>
+</body>
+</html> 

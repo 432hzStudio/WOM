@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOM Argentina | Iniciar Sesión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --primary-50: #f0faff;
+      --primary-100: #e0f5fe;
+      --primary-500: #0e98e9;
+      --primary-600: #0284c7;
+      --primary-700: #0369a1;
+      --secondary-500: #ff9500;
+      --secondary-600: #e67700;
+      --dark-50: #f5f7fa;
+      --dark-100: #e9edf5;
+      --dark-200: #d0d9e8;
+      --dark-300: #a5b7d4;
+      --dark-500: #5573a0;
+      --dark-800: #2f3e5c;
+      --dark-900: #2a364f;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-800);
+      background-color: var(--dark-50);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+    
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: var(--primary-600);
+      text-decoration: none;
+      font-size: 24px;
+    }
+    
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .nav-link {
+      color: var(--dark-500);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-600);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-600);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-700);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--dark-200);
+      color: var(--dark-800);
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--dark-50);
+    }
+    
+    .login-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    
+    .login-form {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 100%;
+      max-width: 450px;
+    }
+    
+    .form-title {
+      color: var(--primary-600);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark-800);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--dark-200);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--dark-800);
+      transition: border-color 0.2s;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-500);
+    }
+    
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: center;
+    }
+    
+    .form-check-input {
+      margin-right: 8px;
+    }
+    
+    .form-link {
+      color: var(--primary-600);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    
+    .form-link:hover {
+      text-decoration: underline;
+    }
+    
+    .form-footer {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--dark-500);
+      font-size: 0.9rem;
+    }
+    
+    .footer {
+      background-color: white;
+      border-top: 1px solid var(--dark-100);
+      padding: 30px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../wom.html" class="navbar-brand">WOM Argentina</a>
+      <div class="navbar-nav">
+        <a href="demo.html" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Cómo funciona</a>
+        <a href="#" class="nav-link">Precios</a>
+        <a href="feed-marcas.html" class="nav-link">Feed de Marcas</a>
+        <a href="feed-voicers.html" class="nav-link">Feed de Voicers</a>
+        <a href="../../wom.html" class="btn btn-outline" style="margin-right: 10px;">Volver al Portal</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Login Section -->
+  <div class="login-container">
+    <div class="login-form">
+      <h2 class="form-title">Iniciar Sesión</h2>
+      
+      <form id="loginForm" onsubmit="return validateLogin(event)">
+        <div class="form-group">
+          <label for="username" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Tu contraseña" required>
+        </div>
+        
+        <div class="form-options">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label for="remember">Recordarme</label>
+          </div>
+          <a href="#" class="form-link">¿Olvidaste tu contraseña?</a>
+        </div>
+        
+        <div id="loginError" style="color: #e53e3e; margin-bottom: 15px; display: none; text-align: center;">
+          Usuario o contraseña incorrectos. Por favor intente nuevamente.
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Iniciar Sesión</button>
+      </form>
+      
+      <script>
+        function validateLogin(event) {
+          event.preventDefault();
+          
+          const username = document.getElementById('username').value.trim();
+          const password = document.getElementById('password').value;
+          const errorElement = document.getElementById('loginError');
+          
+          // Usuario Marca ficticio para pruebas
+          if (username === 'usuariomarcawom' && password === '123456') {
+            // Redirigir al dashboard de Marca
+            window.location.href = 'dashboard-demo.html';
+            return false;
+          }
+          
+          // Usuario Voicer ficticio para pruebas
+          if (username === 'usuariovoicerwom' && password === '123456') {
+            // Redirigir al dashboard de Voicer
+            window.location.href = 'dashboard-voicer.html';
+            return false;
+          }
+          
+          // Si las credenciales son incorrectas
+          errorElement.style.display = 'block';
+          return false;
+        }
+      </script>
+      
+      <div class="form-footer">
+        ¿No tienes una cuenta? 
+        <div style="margin-top: 10px;">
+          <a href="registro-marca.html" class="form-link">Registrarse como Marca</a> | 
+          <a href="registro-voicer.html" class="form-link">Registrarse como Voicer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="text-align: center; color: var(--dark-500); font-size: 14px;">
+        &copy; 2023 WOM Argentina. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
