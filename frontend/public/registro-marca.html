@@ -270,8 +270,10 @@
         <a href="demo.html" class="nav-link">Inicio</a>
         <a href="#" class="nav-link">Cómo funciona</a>
         <a href="#" class="nav-link">Precios</a>
-        <a href="../../wom.html" class="btn btn-outline" style="margin-right: 10px;">Volver al Portal</a>
-        <a href="#" class="btn btn-primary">Iniciar sesión</a>
+        <a href="feed-marcas.html" class="nav-link">Marcas</a>
+        <a href="feed-voicers.html" class="nav-link">Voicers</a>
+        <a href="../../wom.html" class="btn btn-outline">Volver al Portal</a>
+        <a href="login.html" class="btn btn-primary">Iniciar sesión</a>
       </div>
     </div>
   </nav>
@@ -464,12 +466,10 @@
       e.preventDefault();
       
       // Simulando registro exitoso
-      alert('¡Registro exitoso! En breve recibirás un correo de confirmación.');
+      alert('¡Registro exitoso! Gracias por completar tus datos. En breve recibirás un correo de activación de cuenta a tu mail registrado. Activa y comenza a vivir la experiencia WOM!');
       
-      // Redirigir al dashboard (en un entorno real)
-      setTimeout(() => {
-        window.location.href = 'dashboard-demo.html';
-      }, 1500);
+      // Redirección a demo.html
+      window.location.href = 'demo.html';
     });
   </script>
 </body>
