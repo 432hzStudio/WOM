@@ -61,6 +61,9 @@
       background-color: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     
     .navbar .container {
@@ -80,6 +83,7 @@
     .navbar-nav {
       display: flex;
       gap: 20px;
+      align-items: center;
     }
     
     .nav-link {
@@ -279,9 +283,9 @@
   </style>
 </head>
 <body>
-    <!-- Navbar -->    <nav class="navbar">    <div class="container">      <a href="../../wom.html" class="navbar-brand">WOM Argentina</a>      <div class="navbar-nav">        <a href="#" class="nav-link">Inicio</a>        <a href="#" class="nav-link">Cómo funciona</a>        <a href="#" class="nav-link">Precios</a>        <a href="feed-marcas.html" class="nav-link">Feed de Marcas</a>                <a href="feed-voicers.html" class="nav-link">Feed de Voicers</a>        <a href="../../wom.html" class="btn btn-outline" style="margin-right: 10px;">Volver al Portal</a>        <a href="login.html" class="btn btn-primary">Iniciar sesión</a>      </div>    </div>  </nav>
+    <!-- Navbar -->    <nav class="navbar">    <div class="container">      <a href="../../wom.html" class="navbar-brand">WOM Argentina</a>      <div class="navbar-nav">        <a href="demo.html" class="nav-link">Inicio</a>        <a href="#" class="nav-link">Cómo funciona</a>        <a href="#" class="nav-link">Precios</a>        <a href="feed-marcas.html" class="nav-link">Marcas</a>                <a href="feed-voicers.html" class="nav-link">Voicers</a>        <a href="../../wom.html" class="btn btn-outline">Volver al Portal</a>        <a href="login.html" class="btn btn-primary">Iniciar sesión</a>      </div>    </div>  </nav>
   
-    <!-- Hero Section -->    <section class="hero">    <div class="container">      <div class="hero-content" style="flex-direction: column; text-align: center;">        <div class="hero-text" style="padding-right: 0; max-width: 800px; margin: 0 auto;">          <h1 style="color: #2f3e5c;">Marketing boca a boca en la era digital</h1>          <p style="color: #2f3e5c;">Conectamos marcas con personas influyentes a nivel local para crear campañas de marketing genuinas y efectivas.</p>        </div>                <!-- Logo WOM -->        <div style="width: 100%; display: flex; justify-content: center; margin-top: 30px; margin-bottom: 30px;">          <img src="images/logo-wom.png" alt="Logo WOM" style="width: 230px; height: 230px;">        </div>                <div style="width: 100%; margin-top: 20px; display: flex; justify-content: center;">          <div style="display: flex; gap: 30px;">            <a href="registro-marca.html" class="btn btn-secondary" onclick="window.location.href='registro-marca.html'" style="min-width: 180px;">Soy una Marca</a>            <a href="registro-voicer.html" class="btn" style="background: #ff9500; color: white; font-weight: bold; min-width: 180px;" onclick="window.location.href='registro-voicer.html'">Quiero ser Voicer</a>          </div>        </div>      </div>    </div>  </section>
+    <!-- Hero Section -->    <section class="hero">    <div class="container">      <div class="hero-content" style="flex-direction: column; text-align: center;">        <div class="hero-text" style="padding-right: 0; max-width: 800px; margin: 0 auto;">          <h1 style="color: #2f3e5c;">Marketing boca a boca en la era digital</h1>          <p style="color: #2f3e5c;">Conectamos marcas con personas influyentes a nivel local para crear campañas de marketing genuinas y efectivas.</p>        </div>                <!-- Logo WOM -->        <div style="width: 100%; display: flex; justify-content: center; margin-top: 30px; margin-bottom: 30px;">          <img src="images/logo-wom.png" alt="Logo WOM" style="width: 230px; height: 230px;">        </div>                <div style="width: 100%; margin-top: 20px; display: flex; justify-content: center;">          <div style="display: flex; gap: 30px;">            <a href="registro-marca.html" class="btn btn-secondary" onclick="window.location.href='registro-marca.html'" style="min-width: 180px;">Soy una Marca</a>            <a href="registro-voicer.html" class="btn btn-secondary" onclick="window.location.href='registro-voicer.html'" style="min-width: 180px;">Quiero ser Voicer</a>          </div>        </div>      </div>    </div>  </section>
   
   <!-- Features Section -->
   <section class="features">
@@ -339,7 +343,7 @@
       <p>Únete a WOM Argentina y transforma la forma en que tu marca se conecta con su audiencia.</p>
       <div style="margin-top: 20px; display: flex; gap: 15px; justify-content: center;">
         <a href="registro-marca.html" class="btn btn-secondary">Registrarme como Marca</a>
-        <a href="registro-voicer.html" class="btn" style="background: white; color: #0369a1; font-weight: bold;">Registrarme como Voicer</a>
+        <a href="registro-voicer.html" class="btn btn-secondary">Registrarme como Voicer</a>
       </div>
     </div>
   </section>
