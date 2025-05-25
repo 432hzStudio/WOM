@@ -266,14 +266,14 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
-      <a href="../../wom.html" class="navbar-brand">WOM Argentina</a>
+      <a href="/" class="navbar-brand">WOM Argentina</a>
       <div class="navbar-nav">
         <a href="demo.html" class="nav-link">Inicio</a>
         <a href="#" class="nav-link">Cómo funciona</a>
         <a href="#" class="nav-link">Precios</a>
         <a href="feed-marcas.html" class="nav-link">Marcas</a>
         <a href="feed-voicers.html" class="nav-link">Voicers</a>
-        <a href="../../wom.html" class="btn btn-outline">Volver al Portal</a>
+        <a href="/" class="btn btn-outline">Volver al Portal</a>
         <a href="login.html" class="btn btn-primary">Iniciar sesión</a>
       </div>
     </div>
@@ -462,15 +462,34 @@
       }
     });
     
-    // Manejar envío del formulario (simulación)
-    document.getElementById('brandRegisterForm').addEventListener('submit', function(e) {
+    // Manejar envío del formulario
+    document.getElementById('brandRegisterForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      // Simulando registro exitoso
-      alert('¡Registro exitoso! Gracias por completar tus datos. En breve recibirás un correo de activación de cuenta a tu mail registrado. Activa y comenza a vivir la experiencia WOM!');
+      const email = document.getElementById('email').value;
       
-      // Redirección a demo.html
-      window.location.href = 'demo.html';
+      try {
+        // Enviar correo de activación
+        const response = await fetch('http://localhost:3002/api/send-activation', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          alert('¡Registro exitoso! Te hemos enviado un correo de activación. Por favor, revisa tu bandeja de entrada y sigue las instrucciones para activar tu cuenta.');
+          window.location.href = 'demo.html';
+        } else {
+          alert('Hubo un error al enviar el correo de activación. Por favor, intenta nuevamente.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Hubo un error al procesar tu registro. Por favor, intenta nuevamente.');
+      }
     });
   </script>
 </body>
